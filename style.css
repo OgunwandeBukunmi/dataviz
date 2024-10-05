@@ -1,0 +1,41 @@
+rect {
+  fill: steelblue;
+}
+
+.pathLine{
+    stroke-width: 5px;
+    stroke :steelblue;
+}
+
+
+.country:hover{
+  stroke: red;
+  stroke-width : 3px;
+}
+
+.sphere{
+ fill : darkblue;
+}
+.colorGbackground{
+  fill : gray;
+  opacity : 1
+}.colorlegendElement{
+  font-family  :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text{
+  text-shadow: 
+  -1px -1px 3px white
+  -1px 1px 3px white
+  1px -1px 3px white
+  1px 1px 3px white
+}
+.map-path{
+  stroke-width :5px;
+}.circle{
+  fill :red;
+  opacity : 0.4
+}.div span { 
+  margin : 0 50px;
+  font-size : 32px;
+}
