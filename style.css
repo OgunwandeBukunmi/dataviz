@@ -37,5 +37,21 @@ rect {
   opacity : 0.4
 }.div span { 
   margin : 0 50px;
-  font-size : 32px;
+
+}div{
+  height : 70px;
+  width : 100%;
+  display : flex;
+  justify-content :space-around;
+}.div span select {
+    font-size: 2rem;
+   border  : 1px solid rgb(100, 78, 78);
+   border-radius : 20px;
+   text-align :center;
+    background-color: rgb(75, 13, 13);
+      color: white;
+
+}.div span select option {
+  background-color: rgb(75, 13, 13);
+    color: white;
 }

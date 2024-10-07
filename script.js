@@ -601,10 +601,9 @@ function render({ Data, keys }) {
 
   const yaxis = () => d3.axisLeft(yscale);
 
-  const YaxisG = svgG.select(".yaxis");
-  const YaxisGEnter = svgGEnter.append("g").attr("class", "yaxis");
-
-  YaxisG.merge(YaxisGEnter).call(yaxis());
+  const YaxisG = svgG.merge(svgGEnter).selectAll(".yaxis").data([null]);
+  const YaxisGEnter = YaxisG.enter().append("g").attr("class", "yaxis");
+  YaxisGEnter.merge(YaxisG).call(yaxis());
 
   const yAxisLabelEnter = YaxisGEnter.append("text")
     .attr("fill", "black")
@@ -617,8 +616,8 @@ function render({ Data, keys }) {
     .text(
       selectedyvalue.replace(selectedyvalue[0], selectedyvalue[0].toUpperCase())
     );
-  const xAxisG = svgG.select(".xaxis");
-  const xAxisGEnter = svgGEnter.append("g").attr("class", "xaxis");
+  const xAxisG = svgGEnter.merge(svgG).selectAll(".xaxis").data([null]);
+  const xAxisGEnter = xAxisG.enter().append("g").attr("class", "xaxis");
 
   xAxisG
     .merge(xAxisGEnter)
