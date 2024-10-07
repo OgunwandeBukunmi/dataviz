@@ -558,6 +558,7 @@
 
 // d3.json("/ng.json").then(render);
 //scatterplot with interaction
+// final project that will be displayed onn my github
 const svg = d3.select("svg");
 const height = +svg.attr("height");
 const width = +svg.attr("width");
